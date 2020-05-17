@@ -1,0 +1,39 @@
+{% extends 'base.html'%}
+{%block head%}
+<title>New Former</title>
+{%endblock%}
+
+{%block body%}
+<h1></h1>
+<hr>
+<h2> Enter Former Details </h2>
+<br>
+<form action='/post' method='POST'>
+    Village Name :
+    <br>
+    <input type='text'style="border-radius: 5px;"  name='villagename' placeholder="villagename">
+    <br>
+    <br>
+    Farmer Name:
+    <br>
+    <input type='text' style="border-radius: 5px;"  name='formername' placeholder="former name">
+    <br>
+    <br>
+    Mobile Number:
+    <br>
+    <input type='text' style="border-radius: 5px;"  name='mobnum' placeholder="Mobile number">
+    <br>
+    <br>
+
+    Yeild :
+    <textarea class="form-control" style="border-radius: 5px;"  id="content" name='yeild' rows="3" placeholder="Yeild"></textarea>
+    
+    <br>
+    <br>
+
+    
+    <input type="submit" value='Post'>
+    </form>
+
+<hr>
+{%endblock%}

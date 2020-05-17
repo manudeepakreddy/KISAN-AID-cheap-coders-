@@ -1,0 +1,33 @@
+{% extends 'base.html'%}
+{%block head%}
+<title>posts</title>
+{%endblock%}
+
+{%block body%}
+<br>
+<div>
+<h1 style="display: inline;">Total Yeild</h1>
+<a style="display: inline;" class="btn btn-success float-right" href="/post/new">+ Add a farmer</a>
+</div>
+<br>
+{%for po in posts%}
+     <h3>Village: {{ po.villagename}}</32>
+        <br>
+    {%if po.formername%}
+        <small>Yeild Brought By:{{po.formername}} on {{po.date_posted}}</small>
+    {%else%}
+        <br>
+        <small>Yeild Brought By on {{po.date_posted}}</small>
+    {%endif%}
+    <br>
+    <h6>mobile no:-{{po.mobnum}}</h6>
+    <h4>The production[In kg]:</h4><p style="white-space: pre-wrap;">{{po.yeild}}</p>
+    <a class="btn btn-danger" href="post/delete/{{po.id}}">delete</a>
+    <a class="btn btn-primary" href="post/update/{{po.id}}">update</a>
+    <br>
+    <hr>
+
+
+{%endfor%}
+
+{%endblock%}

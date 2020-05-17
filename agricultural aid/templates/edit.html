@@ -1,0 +1,34 @@
+{% extends 'base.html'%}
+{%block head%}
+<title>edit posts</title>
+{%endblock%}
+
+{%block body%}
+<h1>edit post</h1>
+<hr>
+<h2> Edit block post </h2>
+<form action='/post/update/{{post.id}}' method='POST'>
+Village Name :
+<br>
+<input type='text'style="border-radius: 5px;"  name='villagename' value="{{post.villagename}}">
+<br>
+<br>
+Former Name:
+<br>
+<input type='text' style="border-radius: 5px;" name='formername' value="{{post.formername}}">
+<br>
+<br>
+Mobile Number:
+<br>
+<input type='text' style="border-radius: 5px;"  name='mobnum' value="{{post.mobnum}}" placeholder="Mobile number">
+<br>
+<br>
+Yeild  :
+<br>
+<textarea class="form-control"style="border-radius: 5px;"  id="content" name='yeild' rows="3" placeholder="Enter Post">{{post.yeild}}</textarea>
+<br>
+<br>
+<input type="submit" value='Save'>
+</form>
+<hr>
+{%endblock%}
